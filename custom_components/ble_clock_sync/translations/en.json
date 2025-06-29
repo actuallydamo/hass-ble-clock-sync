@@ -1,0 +1,82 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configure BLE Clock",
+        "description": "Set up your {model} clock at {address}",
+        "data": {
+          "name": "Device name",
+          "temp_unit": "Temperature unit",
+          "time_format": "Time format"
+        }
+      },
+      "options": {
+        "title": "Advanced Options",
+        "description": "Configure advanced settings for {model}",
+        "data": {
+          "timeout": "Connection timeout (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the device",
+      "not_supported": "Device is not supported",
+      "bluetooth_not_ready": "Bluetooth discovery is not ready",
+      "unknown": "Unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "Device is already configured",
+      "not_supported": "Device is not supported"
+    }
+  },
+  "entity": {
+    "button": {
+      "sync_time": {
+        "name": "Sync time"
+      }
+    },
+    "select": {
+      "temp_unit": {
+        "name": "Temperature unit"
+      },
+      "time_format": {
+        "name": "Time format"
+      }
+    },
+    "number": {
+      "timeout": {
+        "name": "Connection timeout"
+      }
+    }
+  },
+  "services": {
+    "sync_clocks_time": {
+      "name": "Sync clocks",
+      "description": "Sync time on BLE clock devices",
+      "fields": {
+        "timestamp": {
+          "name": "Timestamp",
+          "description": "UNIX timestamp to set (if empty, current time will be used)"
+        },
+        "timezone": {
+          "name": "Timezone",
+          "description": "Timezone offset in hours (can be decimal for partial hour offsets e.g. -5.5)"
+        }
+      }
+    },
+    "sync_all_clocks_time": {
+      "name": "Sync all clocks",
+      "description": "Sync time on all BLE clock devices",
+      "fields": {
+        "timestamp": {
+          "name": "Timestamp",
+          "description": "UNIX timestamp to set (if empty, current time will be used)"
+        },
+        "timezone": {
+          "name": "Timezone",
+          "description": "Timezone offset in hours (can be decimal for partial hour offsets e.g. -5.5)"
+        }
+      }
+    }
+  }
+}

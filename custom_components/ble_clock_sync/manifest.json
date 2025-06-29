@@ -1,0 +1,23 @@
+{
+  "domain": "ble_clock_sync",
+  "name": "BLE Clock Sync",
+  "bluetooth": [
+    {
+      "connectable": true,
+      "local_name": "LYWSD02*"
+    }
+  ],
+  "codeowners": [
+    "@actuallydamo"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "bluetooth_adapters"
+  ],
+  "documentation": "https://github.com/actuallydamo/hass-ble-clock-sync",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/actuallydamo/hass-ble-clock-sync/issues",
+  "quality_scale": "custom",
+  "requirements": [],
+  "version": "0.1.0"
+}

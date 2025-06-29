@@ -1,0 +1,10 @@
+{
+  "services": {
+    "sync_clocks_time": {
+      "service": "mdi:clock-outline"
+    },
+    "sync_all_clocks_time": {
+      "service": "mdi:clock-outline"
+    }
+  }
+}
